@@ -94,11 +94,11 @@ app.use("/api/listings/:id/reviews", reviewRouter);
 app.use("/api/", userRouter);
 
 // Serve React static files first
-app.use(express.static(path.join(__dirname, "Frontend", "build")));
+app.use(express.static(path.join(__dirname, "../Frontend/build")));
 
 // For any other route (that isn't a static file or backend API), serve index.html
 app.use((req, res) => {
-  res.sendFile(path.join(__dirname, "Frontend", "build", "index.html"));
+  res.sendFile(path.join(__dirname, "../Frontend/build", "index.html"));
 });
 
 //middleware error handling
