@@ -10,4 +10,7 @@ export default defineConfig({
     },
     historyApiFallback: true,
   },
+  build: {
+    outDir: "build", // <- this makes Vite build to "build" instead of "dist"
+  },
 });
